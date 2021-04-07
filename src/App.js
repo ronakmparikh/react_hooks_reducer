@@ -1,10 +1,15 @@
 
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import UseStateArray from './components/UseStateArray';
 import UseStateObject from './components/UseStateObject';
 import UseReducer from './components/UseReducer';
 import{connect} from "react-redux";
+import ShortCirEva from './components/ShortCirEva';
+import UseEffect1 from './components/useEffect/useEffect1';
+import UseEffect2 from './components/useEffect/useEffect2';
+import UseEffectApi from './components/useEffect/useEffectApi';
+import UnControlled from './forms/unControlled';
 
 function App(props) {
   
@@ -50,9 +55,14 @@ function App(props) {
       {/* <UseStateArray/> */}
       {/* <UseStateObject/> */}
       {/* <UseReducer/> */}
-      <input name="username"></input>
+      {/* <ShortCirEva/> */}
+      {/* <UseEffect1 />
+      <UseEffect2/> */}
+      {/* <UseEffectApi /> */}
+      <UnControlled />
+      {/* <input name="username"></input>
     <h1>My name is {props.myname}</h1>
-    <button onClick={()=>{props.changename()}}>change</button>
+    <button onClick={()=>{props.changename("ronak")}}>change</button> */}
     </div>
   );
 }

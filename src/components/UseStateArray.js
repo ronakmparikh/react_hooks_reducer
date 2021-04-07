@@ -11,15 +11,31 @@ const UseStateArray = () => {
         }
     ]
     const [myArray,setArray]= useState(bioData)
-    const cleararray = () => {
-        setArray([]);
-    }
+
+                const cleararray = () => {
+                    setArray([]);
+                }
+                const removeElement = (id) =>{
+                    const myNewArray = myArray.filter((myarray) => {
+
+                            return myarray.id === id
+                    }  )
+                    setArray(myNewArray)
+                        
+                }
 
     return(
         <>
         {
-         myArray.map((myarray) =>
-            <h1>ID:{myarray.id} & name:{myarray.myname}</h1>)
+         myArray.map((myarray) =>{
+             return(
+            <h1>ID:{myarray.id} & name:{myarray.myname}
+            <button onClick={ () => removeElement(myarray.id)}>Remove</button>
+            </h1>
+            
+              ) }
+            )
+            
         }
         <button onClick={cleararray}>Clear</button>
         </>
