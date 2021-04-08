@@ -7,15 +7,14 @@ const useEffect2 = () => {
 
     const [widthCount,setWidthCount]= useState(window.screen.width)
 
-    const actualWidth=()=>{
-        setWidthCount(window.innerWidth)
-    }
+    const actualWidth = () => setWidthCount(window.innerWidth)
+    
 
-    useEffect(()=>{
+    useEffect(() => {
         console.log("Add Event")
         window.addEventListener("resize",actualWidth);
         //use effect cleanup function is avaliable
-        return ()=>{
+        return () => {
             console.log("Remove Event")
             window.removeEventListener("resize",actualWidth)
         }
@@ -24,7 +23,7 @@ const useEffect2 = () => {
     return(
         <div>
         <p>The actual size of wondow is </p>
-        <h1> {widthCount} </h1>
+        <h1> {`count is ${widthCount}`} </h1>
         </div>
     )
 

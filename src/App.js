@@ -12,11 +12,12 @@ import UseEffectApi from './components/useEffect/useEffectApi';
 import UnControlled from './forms/unControlled';
 
 function App(props) {
+
   
   // let newtime = new Date().toLocaleTimeString();
   // const [count, setcount] = useState(0);
   // const [time, settime] = useState(newtime);
-  // const[name,setname]= useState('Ronak Parikh')
+  const[name,setName]= useState('Ronak Parikh')
 
   // const inc = () => {
   //   setcount(count + 1)
@@ -56,13 +57,13 @@ function App(props) {
       {/* <UseStateObject/> */}
       {/* <UseReducer/> */}
       {/* <ShortCirEva/> */}
-      {/* <UseEffect1 />
-      <UseEffect2/> */}
+      <UseEffect1 />
+      <UseEffect2/>
       {/* <UseEffectApi /> */}
-      <UnControlled />
-      {/* <input name="username"></input>
+      {/* <UnControlled /> */}
+      <input name="username" value={name} onChange={(e)=>setName(e.currentTarget.value)}></input>
     <h1>My name is {props.myname}</h1>
-    <button onClick={()=>{props.changename("ronak")}}>change</button> */}
+    <button onClick={()=>{props.changename(name)}}>change</button>
     </div>
   );
 }
